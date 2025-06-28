@@ -1,0 +1,142 @@
+body{
+    font-family: "Plus Jakarta Sans", serif !important;
+    display:flex;
+    flex-direction: column;
+    min-height:100vh;
+}
+
+.new-head ,.edit-head{
+  text-align: center;
+  text-decoration: underline;
+}
+
+.container{
+    flex:1;
+}
+
+/* Navbar */
+
+.navbar{
+    height:5rem;
+    background-color: white;
+    font-size: 1.2rem !important;
+    font-weight: 450;
+}
+
+.navbar-nav a:hover{
+    text-decoration: underline;
+}
+
+.fa-compass{
+    color:#fe424d;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color:black  !important;
+}
+
+/* Footer */
+
+
+
+.f-info-links a{
+    text-decoration: none;
+    color:black;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-links, .f-info-socials{
+    width:100%;
+}
+.f-info-brand{
+    font-weight: 550;
+}
+.f-info-socials i{
+    font-size: 1.5rem;
+    margin-right:0.85rem;
+    margin-top: 1rem;
+}
+
+.f-info{
+    font-size: 1.1rem;
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+/* Cards */
+
+.listing-card{
+    border:none !important;
+   margin-bottom:2rem;
+}
+
+.card-img-top{
+    border-radius:1rem !important;
+    width:100% !important;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding:0 !important;
+}
+
+.card-text{
+    font-weight: 400  !important;
+}
+
+.listing-link{
+    text-decoration: none;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+.add-btn , .edit-btn{
+    border:none !important;
+    background-color: #fe424d !important;
+    color: white;
+}
+
+/* Show */
+.show-img{
+    height:100%;
+    width: 100% !important;
+    border-radius: 15px;
+}
+.ncard{
+    height:50vh;
+    object-fit: contain;
+    width: 80vh !important;
+    overflow:hidden;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.btns{
+    padding:0;
+    margin:0;
+    display: flex;
+}
+
+.smlImage img{
+    height:200px;
+    width:300px;
+}
+
+#map{
+    height:300px;
+    width: 80vh;
+}
