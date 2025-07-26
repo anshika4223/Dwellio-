@@ -12,6 +12,7 @@ const methodOverride=require("method-override");
 const ejsMate=require("ejs-mate");
 const ExpressError=require("./utils/ExpressError.js");
 const session=require("express-session");
+const MongoStore=require("connect-mongo");
 const flash=require("connect-flash");
 const passport =require("passport");
 const LocalStrategy=require("passport-local");
@@ -35,7 +36,21 @@ main().then(()=>{
     console.log(err);
 });
 
+const store = MongoStore.create({
+    mongoUrl: dbURL,
+    touchAfter: 24 * 3600, // time period in seconds
+    crypto: {
+        secret: "my secret code"
+    }
+});
+
+store.on("error",(e)=>{
+    console.log("session store error",e);
+
+});
+
 const sessionOptions={
+    store:store,
     secret:"my secret code",
     resave: false,
     saveUninitialized : true,
