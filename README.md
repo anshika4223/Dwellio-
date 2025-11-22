@@ -41,6 +41,5 @@ It simplifies property discovery and management for tenants and landlords with a
 
 ---
 
-## 🧩 Folder Structure
 
 
