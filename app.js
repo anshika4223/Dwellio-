@@ -24,9 +24,15 @@ const listingRouter=require("./routes/listing.js");
 const reviewRouter=require("./routes/review.js");
 const userRouter=require("./routes/user.js");
 
+const dbURL = process.env.MONGO_URI || 
+"mongodb+srv://anshikapuricivil2026_db_user:RZqRhinKabhP75d7@cluster0.xgram5m.mongodb.net/?appName=Cluster0";
+
+
 
 async function main() {
-    await mongoose.connect(mongodb+srv://anshikapuricivil2026_db_user:RZqRhinKabhP75d7@cluster0.xgram5m.mongodb.net/?appName=Cluster0);
+    await mongoose.connect(
+        "mongodb+srv://anshikapuricivil2026_db_user:RZqRhinKabhP75d7@cluster0.xgram5m.mongodb.net/?appName=Cluster0"
+    );
 }
 
 main().then(()=>{
@@ -138,5 +144,6 @@ app.listen(8080,()=>{
 //     console.log("sample was saved");
 //     res.send("successful testing");
 // })
+
 
 
